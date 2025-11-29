@@ -290,22 +290,25 @@ export default function Home() {
                   </div>
 
                   {/* Кнопки действий */}
-                  <div className="pt-6 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-                      <button className="flex items-center gap-2 bg-white text-black font-orbitron font-bold px-6 py-3 rounded hover:bg-cyber-neon hover:shadow-[0_0_20px_rgba(0,243,255,0.5)] transition-all">
-                          <Mail size={18}/> CONTACT ME
-                      </button>
-                      <div className="flex gap-4">
-                          <a href="#" className="p-3 border border-white/20 rounded-full hover:bg-white/10 hover:text-cyber-neon transition-colors">
-                              <Github size={20}/>
-                          </a>
-                          <a href="#" className="p-3 border border-white/20 rounded-full hover:bg-white/10 hover:text-cyber-pink transition-colors">
-                              <Terminal size={20}/>
-                          </a>
-                          <a href="#" className="p-3 border border-white/20 rounded-full hover:bg-white/10 hover:text-yellow-400 transition-colors">
-                              <Code2 size={20}/>
-                          </a>
-                      </div>
-                  </div>
+                  {/* Кнопки действий */}
+<div className="pt-6 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+    {/* Ссылка на Telegram */}
+    <a href="https://t.me/co77eemania911" target="_blank" rel="noopener noreferrer">
+        <button className="flex items-center gap-2 bg-white text-black font-orbitron font-bold px-6 py-3 rounded hover:bg-cyber-neon hover:shadow-[0_0_20px_rgba(0,243,255,0.5)] transition-all">
+            <Mail size={18}/> TELEGRAM
+        </button>
+    </a>
+    
+    <div className="flex gap-4">
+        {/* Ссылка на GitHub */}
+        <a href="https://github.com/DTside" target="_blank" rel="noopener noreferrer" className="p-3 border border-white/20 rounded-full hover:bg-white/10 hover:text-cyber-neon transition-colors">
+            <Github size={20}/>
+        </a>
+        <a href="#" className="p-3 border border-white/20 rounded-full hover:bg-white/10 hover:text-cyber-pink transition-colors">
+            <Terminal size={20}/>
+        </a>
+    </div>
+</div>
               </div>
 
            </div>

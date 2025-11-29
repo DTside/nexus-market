@@ -30,6 +30,7 @@ export default function ItemPage() {
     const fetchItem = async () => {
       if (!params.id) return;
       try {
+        // 1. Загружаем данные
         const { data, error } = await supabase
           .from('items')
           .select('*')
@@ -38,7 +39,10 @@ export default function ItemPage() {
 
         if (error) throw error;
         if (data) {
-          setItem({ ...data, history: fakeHistory });
+          setItem({ ...data, history: fakeHistory }); // fakeHistory оставляем пока для графика цены
+          
+          // 2. ТРЕКИНГ: Увеличиваем просмотры (Fire and forget)
+          await supabase.rpc('increment_views', { item_id: data.id });
         }
       } catch (error) {
         console.error("Error loading item:", error);
